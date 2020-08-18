@@ -4,10 +4,17 @@ import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCartOutlined";
 import { useStateValue } from "./StateProvider";
+import { auth } from "./Firebase";
 
 function Header() {
-	const [{ basket }] = useStateValue();
+	const [{ basket, user }] = useStateValue();
 	console.log(basket);
+	const login = () => {
+		if (user) {
+			auth.signOut();
+		}
+	};
+
 	return (
 		<nav className="header">
 			{/* logo */}
@@ -25,12 +32,13 @@ function Header() {
 			</div>
 			{/* links */}
 			<div className="headerNav">
-				<Link to="/login" className="header__link">
+				{/* if the user doesnt exist, then show login page */}
+				<Link to={!user && "/login"} className="header__link">
 					{/* These Link components allow for SPA Single Page Application rendering */}
-					<div className="header__option">
-						<span className="header__option__line1">Hello, Jordan</span>
+					<div onClick={login} className="header__option">
+						<span className="header__option__line1">Hello, {user?.email}</span>
 						<span className="header__option__line2">
-							<strong>Sign In</strong>
+							<strong>{user ? "Sign Out" : "Sign In"}</strong>
 						</span>
 					</div>
 				</Link>

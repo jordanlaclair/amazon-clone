@@ -1,16 +1,5 @@
-import { v4 as uuidv4 } from "uuid";
 export const initialState = {
-	basket: [
-		{
-			title:
-				"Logitech C920S HD Pro - Privacy Shutter Webcam (Widescreen Video Calls and Recordings, 1080p Streaming Camera, Desktop or Laptop Webcam)",
-			id: uuidv4(),
-			price: 99.99,
-			image:
-				"https://images-na.ssl-images-amazon.com/images/I/61-6uAf8soL._AC_SL1500_.jpg",
-			rating: 4,
-		},
-	],
+	basket: [],
 	user: null,
 };
 
@@ -20,6 +9,11 @@ export const getBasketTotal = (basket) =>
 const reducer = (state, action) => {
 	console.log(action);
 	switch (action.type) {
+		case "SET_USER":
+			return {
+				...state,
+				user: action.user,
+			};
 		case "ADD_TO_BASKET":
 			//LOGIC FOR ADDING ITEM TO BASKET
 			return { ...state, basket: [...state.basket, action.item] };

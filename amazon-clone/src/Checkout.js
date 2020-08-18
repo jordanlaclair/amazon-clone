@@ -4,7 +4,6 @@ import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";
 import "./Checkout.css";
 import Subtotal from "./Subtotal";
-import CurrencyFormat from "react-currency-format";
 
 function Checkout() {
 	const [{ basket }] = useStateValue();
