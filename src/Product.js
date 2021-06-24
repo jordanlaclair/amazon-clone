@@ -19,7 +19,7 @@ function Product({ id, title, image, price, rating }) {
 
 	return (
 		<div className="product">
-			<div class="product__info">
+			<div class="product__infoo">
 				<p>{title}</p>
 				<div class="product__rating">
 					{Array(rating)

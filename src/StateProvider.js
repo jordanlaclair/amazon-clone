@@ -13,6 +13,5 @@ export const StateProvider = ({ reducer, initialState, children }) => (
 //all children of State Provider have access to those values
 //the provider gives access
 //the consumer calls the values
-
 //this is how we use it inside of another component
 export const useStateValue = () => useContext(StateContext);
