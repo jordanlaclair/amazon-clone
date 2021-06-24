@@ -10,7 +10,7 @@ With the help of YouTube and the internet I got my first glimpse of some of thes
 
 - Firebase 🔥
 - React Router ⚛️
-- React Context API (no more having to drill state 😄)⚛️
+- React Context API ⚛️ (no more having to drill state 😄)
 
 ## Live Demo
 
