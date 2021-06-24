@@ -20,6 +20,13 @@ function Home() {
 					rating={4}
 				/>
 				<Product
+					title="Logitech C920S HD Pro - Privacy Shutter Webcam (Widescreen Video Calls and Recordings, 1080p Streaming Camera, Desktop or Laptop Webcam)"
+					id={uuidv4}
+					price={99.99}
+					image="https://images-na.ssl-images-amazon.com/images/I/61-6uAf8soL._AC_SL1500_.jpg"
+					rating={4}
+				/>
+				<Product
 					title="Scepter E275W-19203R - 27 '' Ultra Slim 1080P LED Monitor, 2 HDMI VGA Integrated Speakers, 2018 Metallic Black, Metallic Black"
 					id={uuidv4}
 					price={109.99}

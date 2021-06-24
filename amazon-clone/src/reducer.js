@@ -16,7 +16,7 @@ const reducer = (state, action) => {
 			};
 		case "ADD_TO_BASKET":
 			//LOGIC FOR ADDING ITEM TO BASKET
-			return { ...state, basket: [...state.basket, action.item] };
+			return { ...state, basket: [...state.basket, action.item] }; //returns what was previously in the basket, returns the items from that action"ADD_TO_BASKET" which the items were name,image, price, etc..
 		case "REMOVE_FROM_BASKET":
 			//LOGIC FOR REMOVING ITEM FOR BASKET
 			//here we clone the basket
