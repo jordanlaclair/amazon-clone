@@ -14,4 +14,4 @@ With the help of YouTube and the internet I got my first glimpse of some of thes
 
 ## Live Demo
 
-🟢 (Live Demo)[https://clone-8228d.web.app/] 🟢
+🟢 [Live Demo](https://clone-8228d.web.app/) 🟢
